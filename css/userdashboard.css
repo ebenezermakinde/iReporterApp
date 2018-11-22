@@ -72,7 +72,6 @@ body{
     width: 100%;
 }
 
-<<<<<<< HEAD
 #main h2{
     text-align: center;
 }
@@ -145,8 +144,6 @@ form input[type="reset"]:hover
   color:#000;
 }
 
-@media(max-width:1000px){
-=======
 /* User dashboard table styling */
 .user-details table{
     width: 400px;
@@ -177,8 +174,7 @@ form input[type="reset"]:hover
     background-color: #ddd;
 }
 
-@media(max-width:568px){
->>>>>>> userdash
+@media(max-width:1000px){
     .navbar-nav{display: none}
     form{
         width: 60%;
