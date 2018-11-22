@@ -1,37 +1,25 @@
-//Variable declarations.
-let toggleNavStatus = false;
-const btnToggleNav = document.getElementById('btnToggleNav'); 
+//Variable declaration.
+const openSideBar = document.getElementById('open-sidebar');
+const closeSideBar = document.getElementById('close-sidebar');
 
-//Event handling for the sidebar Nav.
-btnToggleNav.addEventListener('click', () =>{
-    let getSidebar = document.querySelector(".nav-sidebar");
-    let getSidebarUl = document.querySelector(".nav-sidebar ul");
-    let getSidebarTitle = document.querySelector(".nav-sidebar span");
-    let getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
-    
-    if(toggleNavStatus === false) {
-        getSidebarUl.style.visibility = "visible";
-        getSidebar.style.width = "272px";
-        getSidebarTitle.style.opacity = "0.5";
+//function to handle sidebar menu slide open operation.
+const openSlideMenu = () => {
+    document.getElementById('side-menu').style.width = '250px';
+    document.getElementById('main').style.marginLeft = '250px';
+ }
 
-        let arrayLength = getSidebarLinks.length;
-        for (let i = 0; i < arrayLength; i++) {
-            getSidebarLinks[i].style.opacity = "1";     
-        }
+//function to handle side-bar menu close operation.
+const closeSlideMenu = () => {
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+ }
 
-        toggleNavStatus = true;
+ openSideBar.addEventListener('click', () => {
+     //calls the function.
+    openSlideMenu()
+ });
 
-    } else if (toggleNavStatus === true) {
-            getSidebarUl.style.visibility = "hidden";
-            getSidebar.style.width = "50px";
-            getSidebarTitle.style.opacity = "0";
-
-            let arrayLength = getSidebarLinks.length;
-            for (let i = 0; i < arrayLength; i++) {
-                getSidebarLinks[i].style.opacity = "1";     
-            }
-
-            toggleNavStatus = false;
-        }
-    
+ closeSideBar.addEventListener('click', () => {
+    //calls the function.
+   closeSlideMenu();
 });
