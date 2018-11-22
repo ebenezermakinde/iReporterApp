@@ -72,6 +72,36 @@ body{
     width: 100%;
 }
 
+/* User dashboard table styling */
+.user-details table{
+    width: 400px;
+}
+
+.user-details caption{
+    font-size: 20px;
+}
+
+.user-details th{
+    text-align: left;
+
+}
+
+.user-details table, th, td {
+    border-collapse: collapse;
+}
+
+.user-details th, td {
+    padding: 20px;
+}
+
+.user-details tr:nth-child(even){
+    background-color: #fff;
+}
+
+.user-details tr:nth-child(odd){
+    background-color: #ddd;
+}
+
 @media(max-width:568px){
     .navbar-nav{display: none}
 }

@@ -37,7 +37,25 @@
     </div>
 
     <div id="main">
-        <h1>My Dashboard Details</h1>
+        <h2>Create an Intervention</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="intervention">Intervention Name</label>
+                <input type="text" name="intervention" id="intervention" placeholder="Intervention">
+            </div>
+
+            <div class="form-group">
+                <label for="intervention-image">Upload an Image</label>
+                <input type="file" name="intervention-image" id="intervention-image" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="intervention-video">Upload a Video</label>
+                <input type="file" name="intervention-video" id="intervention-video" accept="video/*">
+            </div>
+                <input type="reset" name="reset" id="reset" value="Reset">  
+                <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
     </div>
     <script src="./js/main.js"></script>
 </body>
